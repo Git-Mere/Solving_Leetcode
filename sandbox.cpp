@@ -459,3 +459,39 @@ int find_kth_element(arr1, arr2, k){
     Base:
 
 }
+
+void quicksort(int* a, unsigned left, unsigned right)
+{
+    // BASE:
+    if (right - left <= 1) {
+        return;
+    }
+
+    // SPLIT (PARTITION):
+    int l = left;
+    int r = right - 1;
+    int c = a[(l + r) / 2];   // pivot
+
+    while (l <= r) {
+        while (l < static_cast<int>(right) - 1 && a[l] < c) l++;
+        while (r > static_cast<int>(left) && a[r] > c) r--;
+        if (l <= r) {
+            std::swap(a[l], a[r]);
+            l++;
+            r--;
+        }
+    }
+    // 여기서 [left, r+1) 와 [l, right) 두 구간으로 논리적 split 완료
+
+    // REC_CALLS:
+    if (static_cast<int>(left) < r + 1)
+        quicksort(a, left, r + 1);
+
+    if (l < static_cast<int>(right))
+        quicksort(a, l, right);
+
+    // COMBINE:
+    // quicksort는 partition에서 이미 pivot 기준 재배치를 끝냈고,
+    // 각 부분배열이 재귀적으로 정렬되면 전체도 자동으로 정렬되기 때문에
+    // 추가 combine 단계는 없음.
+}
