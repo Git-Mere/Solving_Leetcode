@@ -128,6 +128,7 @@
     <ClCompile Include="Best Time to Buy and Sell Stock.cpp" />
     <ClCompile Include="Climbing Stair.cpp" />
     <ClCompile Include="Coin Change.cpp" />
+    <ClCompile Include="Combination Sum.cpp" />
     <ClCompile Include="Container with Most water.cpp" />
     <ClCompile Include="Contains Duplicate.cpp" />
     <ClCompile Include="Counting Bits.cpp" />

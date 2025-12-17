@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
+#include <set>
 
 
 using namespace std;
@@ -16,4 +17,5 @@ namespace DP {
 	int longestCommonSubsequence(string text1, string text2);
 	bool wordBreak(string s, vector<string>& wordDict);
 	int mincostTickets(std::vector<int>& days, std::vector<int>& costs);
+	vector<vector<int>> combinationSum(vector<int>& candidates, int target);
 }

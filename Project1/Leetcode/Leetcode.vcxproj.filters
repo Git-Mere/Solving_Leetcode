@@ -99,6 +99,9 @@
     <ClCompile Include="Minimum Cost for Tickets.cpp">
       <Filter>Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="Combination Sum.cpp">
+      <Filter>Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Binary.h">

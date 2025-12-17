@@ -3,10 +3,9 @@
 #include "Dynamic Programming.h"
 
 int main() {
-    string s = "leetcode";
-    vector<string> str{ "leet", "code" };
+    vector<int> str{ 2, 3, 5};
 
-    cout << DP::wordBreak(s, str);
+    DP::combinationSum(str, 8);
 
     return 0;
 }
