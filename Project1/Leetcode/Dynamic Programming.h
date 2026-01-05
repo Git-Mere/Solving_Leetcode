@@ -18,4 +18,5 @@ namespace DP {
 	bool wordBreak(string s, vector<string>& wordDict);
 	int mincostTickets(std::vector<int>& days, std::vector<int>& costs);
 	vector<vector<int>> combinationSum(vector<int>& candidates, int target);
+	int rob(vector<int>& nums);
 }
