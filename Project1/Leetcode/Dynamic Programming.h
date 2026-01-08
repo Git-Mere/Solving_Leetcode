@@ -19,4 +19,5 @@ namespace DP {
 	int mincostTickets(std::vector<int>& days, std::vector<int>& costs);
 	vector<vector<int>> combinationSum(vector<int>& candidates, int target);
 	int rob(vector<int>& nums);
+	int rob2(vector<int>& nums);
 }
