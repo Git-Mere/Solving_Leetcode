@@ -20,4 +20,5 @@ namespace DP {
 	vector<vector<int>> combinationSum(vector<int>& candidates, int target);
 	int rob(vector<int>& nums);
 	int rob2(vector<int>& nums);
+	int numDecodings(string s);
 }

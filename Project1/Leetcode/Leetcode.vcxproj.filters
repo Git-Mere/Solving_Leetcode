@@ -108,6 +108,9 @@
     <ClCompile Include="House Robber2.cpp">
       <Filter>Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="Decode Ways.cpp">
+      <Filter>Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Binary.h">

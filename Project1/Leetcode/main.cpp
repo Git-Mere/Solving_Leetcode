@@ -3,9 +3,8 @@
 #include "Dynamic Programming.h"
 
 int main() {
-    vector<int> str{ 2, 3, 5};
-
-    DP::combinationSum(str, 8);
+    string str = "2611055971756562";
+    DP::numDecodings(str);
 
     return 0;
 }
