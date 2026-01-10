@@ -21,4 +21,5 @@ namespace DP {
 	int rob(vector<int>& nums);
 	int rob2(vector<int>& nums);
 	int numDecodings(string s);
+	int uniquePaths(int m, int n);
 }
