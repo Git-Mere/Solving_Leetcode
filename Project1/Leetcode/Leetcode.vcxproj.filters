@@ -114,6 +114,9 @@
     <ClCompile Include="Unique Paths.cpp">
       <Filter>Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="Jump Game.cpp">
+      <Filter>Dynamic Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Binary.h">

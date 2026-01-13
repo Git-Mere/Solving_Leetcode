@@ -22,4 +22,5 @@ namespace DP {
 	int rob2(vector<int>& nums);
 	int numDecodings(string s);
 	int uniquePaths(int m, int n);
+	bool canJump(vector<int>& nums);
 }
