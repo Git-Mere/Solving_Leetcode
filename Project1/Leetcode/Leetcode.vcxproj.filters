@@ -25,6 +25,9 @@
     <Filter Include="Dynamic Programming">
       <UniqueIdentifier>{35dd6d9c-38c4-4438-af9c-489ede87d2b1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Graph">
+      <UniqueIdentifier>{c1e48203-b815-416b-a27c-1d95af8e15cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -117,6 +120,9 @@
     <ClCompile Include="Jump Game.cpp">
       <Filter>Dynamic Programming</Filter>
     </ClCompile>
+    <ClCompile Include="Clone Graph.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Binary.h">
@@ -127,6 +133,9 @@
     </ClInclude>
     <ClInclude Include="Dynamic Programming.h">
       <Filter>Dynamic Programming</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Graph</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

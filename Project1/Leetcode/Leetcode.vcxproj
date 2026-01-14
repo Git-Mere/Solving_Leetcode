@@ -127,6 +127,7 @@
     <ClCompile Include="3 Sum.cpp" />
     <ClCompile Include="Best Time to Buy and Sell Stock.cpp" />
     <ClCompile Include="Climbing Stair.cpp" />
+    <ClCompile Include="Clone Graph.cpp" />
     <ClCompile Include="Coin Change.cpp" />
     <ClCompile Include="Combination Sum.cpp" />
     <ClCompile Include="Container with Most water.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="Array.h" />
     <ClInclude Include="Binary.h" />
     <ClInclude Include="Dynamic Programming.h" />
+    <ClInclude Include="Graph.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
