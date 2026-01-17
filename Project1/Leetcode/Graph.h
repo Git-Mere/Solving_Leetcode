@@ -5,6 +5,8 @@
 #include <iostream>
 #include <algorithm>
 #include <set>
+#include <stack>
+
 
 using namespace std;
 

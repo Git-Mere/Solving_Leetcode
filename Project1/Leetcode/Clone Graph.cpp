@@ -1,44 +1,39 @@
 #include "Graph.h"
 
-Node* test_help() {
-    Node* arr[4];
-    Node* node1 = new Node(1);
-    Node* node2 = new Node(1);
-    Node* node3 = new Node(1);
-    Node* node4 = new Node(1);
 
-    return arr;
+void help(vector<Node*> visited, Node* node, Node* current) {
+    vector<Node*>* origin_node_vec = &node->neighbors;
+    for (int i = 0; i < (*origin_node_vec).size(); i++) {
+        if ((*origin_node_vec)[i] == (*current).neighbors[i]) {
+            if (visited[(*current).neighbors[i]->val]) {
+                (*current).neighbors[i] = visited[(*current).neighbors[i]->val];
+            }
+            else {
+                (*current).neighbors[i] = new Node((*origin_node_vec)[i]->val, (*origin_node_vec)[i]->neighbors);
+                visited[(*current).neighbors[i]->val] = (*current).neighbors[i];
+
+            }
+            Node* tmp = (*current).neighbors[i];
+            for (int j = 0; j < tmp->neighbors.size(); j++) {
+                if (tmp->neighbors[j]->val == current->val) {
+                    tmp->neighbors[j] = current;
+                    break;
+                }
+            }
+            help(visited, (*origin_node_vec)[i], (*current).neighbors[i]);
+        }
+    }
 }
 
 Node* Graph::cloneGraph(Node* node) {
     if (node == nullptr) {
         return nullptr;
     }
-
-    Node* first_node = new Node((*node).val);
-    if ((*first_node).neighbors.empty()) {
-        return first_node;
-    }
+    Node* first_node = new Node(node->val, node->neighbors);
     Node* current = first_node;
-    queue<Node*> waiting_list;
-    waiting_list.push(first_node);
-
-    while (!waiting_list.empty()) {
-        current = waiting_list.front();
-        waiting_list.pop();
-
-        Node* listnode = node + (*current).val - 1;
-        for (int i = 0; i < (*listnode).neighbors.size(); i++) {
-            if (find((*current).neighbors.begin(), (*current).neighbors.end(), listnode->neighbors[i])
-                == (*current).neighbors.end()) {
-                Node* nei = new Node((*listnode).neighbors[i]->val);
-                (*nei).neighbors.push_back(current);
-                (*first_node).neighbors.push_back(nei);
-                waiting_list.push(nei);
-            }
-        }
-    }
-
+    vector<Node*> visited(101, nullptr);
+    visited[current->val] = current;
+    help(visited, node, current);
 
     return first_node;
 }
