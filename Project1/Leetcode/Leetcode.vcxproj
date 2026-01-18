@@ -133,6 +133,7 @@
     <ClCompile Include="Container with Most water.cpp" />
     <ClCompile Include="Contains Duplicate.cpp" />
     <ClCompile Include="Counting Bits.cpp" />
+    <ClCompile Include="Course Schedule.cpp" />
     <ClCompile Include="Decode Ways.cpp" />
     <ClCompile Include="Find Minimum in Rotated Sorted Array.cpp" />
     <ClCompile Include="House Robber.cpp" />

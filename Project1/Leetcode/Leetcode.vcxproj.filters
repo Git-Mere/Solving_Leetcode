@@ -123,6 +123,9 @@
     <ClCompile Include="Clone Graph.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="Course Schedule.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Binary.h">
