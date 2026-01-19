@@ -1,63 +1,33 @@
 #include "Graph.h"
 
-class Node {
-public:
-    int num;
-    vector<int> ends;
-	vector<Node*> nexts;
-    Node(int _num) {
-        num = _num;
+bool Graph::canFinish(int n, vector<vector<int>>& prerequisites) {
+    vector<int> adj[1234];
+    vector<int> indegree(n, 0);
+    vector<int> ans;
+
+    for (auto x : prerequisites) {
+        adj[x[0]].push_back(x[1]);
+        indegree[x[1]]++;
     }
 
-};
-
-bool end_update(std::vector<Node*>& db, Node* start, Node* end) {
-    for (int i = 0; i < db.size(); i++) {
-        if (db[i] == nullptr) {
-            continue;
+    queue<int> q;
+    for (int i = 0; i < n; i++) {
+        if (indegree[i] == 0) {
+            q.push(i);
         }
-		for (int j = 0; j < db[i]->ends.size(); j++) {
-            if (db[i]->ends[j] == start->num) {
-                if (db[i]->ends[j] == end->num) {
-                    return false;
-                }
-                else {
-                    db[i]->ends[j] = end->num;
-                }
+    }
+
+    while (!q.empty()) {
+        auto t = q.front();
+        ans.push_back(t);
+        q.pop();
+
+        for (auto x : adj[t]) {
+            indegree[x]--;
+            if (indegree[x] == 0) {
+                q.push(x);
             }
         }
     }
-    return true;
-}
-
-bool Graph::canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-    std::vector<Node*> v(numCourses, nullptr);
-    for (int i = 0; i < prerequisites.size(); i++) {
-        Node* course = nullptr;
-        Node* precourse = nullptr;
-        if (v[prerequisites[i][0]] != nullptr) {
-            course = v[prerequisites[i][0]];
-        }
-        else {
-            course = new Node(prerequisites[i][0]);
-            v[prerequisites[i][0]] = course;
-        }
-
-        if (v[prerequisites[i][1]] != nullptr) {
-            precourse = v[prerequisites[i][1]];
-        }
-        else {
-            precourse = new Node(prerequisites[i][1]);
-            v[prerequisites[i][1]] = precourse;
-        }
-        precourse->ends.push_back(prerequisites[i][0]);
-
-
-        //precourse->nexts.push_back(course);
-        if (!end_update(v, precourse, course)) {
-            return false;
-        }
-
-    }
-    return true;
+    return ans.size() == n;
 }
