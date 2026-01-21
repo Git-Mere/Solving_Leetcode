@@ -5,18 +5,15 @@
 
 vector<vector<int>> test_help() {
 	vector<vector<int>> prerequisites;
-	prerequisites.push_back({ 1,0 });
-	prerequisites.push_back({ 2,0 });
-	prerequisites.push_back({ 2,3 });
-	prerequisites.push_back({ 3,1 });
-	prerequisites.push_back({ 1,3 });
-	//prerequisites.push_back({ 3,0 });
+	prerequisites.push_back({ 5,5,5,5 });
+	prerequisites.push_back({ 4,4,4,4 });
+	prerequisites.push_back({ 5,5,5,5 });
 	return prerequisites;
 }
 
 int main() {
 	vector<vector<int>> test = test_help();
-	cout << Graph::canFinish(test.size(), test);
+	Graph::pacificAtlantic(test);
 
     return 0;
 }

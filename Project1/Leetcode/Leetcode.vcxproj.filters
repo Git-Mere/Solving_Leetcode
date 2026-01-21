@@ -126,6 +126,9 @@
     <ClCompile Include="Course Schedule.cpp">
       <Filter>Graph</Filter>
     </ClCompile>
+    <ClCompile Include="Pacific Atlantic Water Flow.cpp">
+      <Filter>Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Binary.h">
